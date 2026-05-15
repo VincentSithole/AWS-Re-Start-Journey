@@ -1,3 +1,3 @@
-🎓 Labs
+✨ Certifications & Badges
 
-Hands-on lab exercises from AWS re/Start, documenting practical application of cloud, Linux, networking, and security concepts.
+Cloud computing and AWS certifications earned through hands-on learning. Each badge represents foundational knowledge and practical skills with AWS services and real-world cloud scenarios.
