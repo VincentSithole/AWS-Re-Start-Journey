@@ -1,12 +1,12 @@
-🎯 What I Learned
+**🎯 What I Learned**
 
 Through 12 completed modules, I gained hands-on experience with AWS core services across compute, storage, networking, databases, security, and cost management.
 
 
 
-📚 Module Breakdown
+**📚 Module Breakdown**
 
-☁️ Cloud Computing Essentials
+#☁️ Cloud Computing Essentials#
 
 IaaS, PaaS, SaaS models, AWS global infrastructure, and cloud deployment strategies.
 
@@ -17,11 +17,9 @@ IaaS, PaaS, SaaS models, AWS global infrastructure, and cloud deployment strateg
 AWS Management Console navigation, account setup, and basic service exploration.
 
 
-
 💻 Computing Solutions
 
 EC2 instance types, pricing models (On-Demand, Reserved, Spot), AMIs, and Elastic IPs.
-
 
 
 🌐 Networking Concepts
