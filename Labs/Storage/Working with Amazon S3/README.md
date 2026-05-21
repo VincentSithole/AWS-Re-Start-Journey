@@ -1,17 +1,3 @@
-# Working with Amazon S3
-
-## Summary
-
-Created and configured an S3 bucket for secure file sharing with an external user, enforced IAM permissions, and set up S3 event notifications to send email alerts via Amazon SNS when bucket contents change.
-
----
-
-## Step 1: Configure AWS CLI on EC2 Instance
-
-Connected to the CLI Host EC2 instance using EC2 Instance Connect and configured AWS CLI with the provided credentials.
-
-```bash
-aws configure
 Entered:
 
 AWS Access Key ID: [provided]
@@ -82,25 +68,6 @@ Created an SNS topic to receive email notifications when S3 bucket contents chan
 
 Topic Name: s3NotificationTopic
 
-Access Policy Added:
-
-json
-{
-  "Version": "2008-10-17",
-  "Id": "S3PublishPolicy",
-  "Statement": [
-    {
-      "Sid": "AllowPublishFromS3",
-      "Effect": "Allow",
-      "Principal": {"Service": "s3.amazonaws.com"},
-      "Action": "SNS:Publish",
-      "Resource": "arn:aws:sns:us-west-2:896038352564:s3NotificationTopic",
-      "Condition": {
-        "ArnLike": {"aws:SourceArn": "arn:aws:s3:*:*:cafe-luxury-test"}
-      }
-    }
-  ]
-}
 Subscription:
 
 Protocol: Email
@@ -176,6 +143,10 @@ Opened the S3 console to confirm all uploaded files are present in the images/ f
 https://Screenshot%25202026-05-21%2520151736.png
 
 Results Summary
+Objective	Status
+Use s3api and s3 CLI commands to create and configure S3 bucket	✅
+Verify write permissions to a user on an S3 bucket	✅
+Configure event notification on an S3 bucket	✅
 Task	Status
 Create S3 bucket via CLI	✅
 Upload images to S3	✅
@@ -187,3 +158,25 @@ Upload triggers email notification	✅
 Delete triggers email notification	✅
 Get does not trigger email	✅
 Unauthorized ACL change blocked	✅
+Environment Details
+Item	Value
+AWS Account ID	8960-3835-2564
+Region	us-west-2
+S3 Bucket	cafe-luxury-test
+SNS Topic ARN	arn:aws:sns:us-west-2:896038352564:s3NotificationTopic
+IAM Group	mediaco
+IAM User Tested	mediacouser
+Screenshots
+Filename	Description
+Screenshot 2026-05-21 143009.png	Bucket creation and image sync
+Screenshot 2026-05-21 144723.png	SNS subscription creation
+Screenshot 2026-05-21 151639.png	CLI put-object, get-object, AccessDenied
+Screenshot 2026-05-21 151736.png	Final bucket contents in S3 console
+Screenshot 2026-05-21 151810.png	IAM group mediaco with policies
+References
+AWS CLI S3 Commands
+
+S3 Event Notifications
+
+IAM Policies
+
