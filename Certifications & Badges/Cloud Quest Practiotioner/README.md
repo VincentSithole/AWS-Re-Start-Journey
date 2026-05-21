@@ -101,5 +101,6 @@ Cloud computing removes the need for physical infrastructure management. Through
 
 
 🏆 Certificate
+
 ![AWS SimuLearn Certificate](./certificate.png)
 
