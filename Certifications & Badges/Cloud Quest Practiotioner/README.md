@@ -6,7 +6,7 @@ Through 12 completed modules, I gained hands-on experience with AWS core service
 
 **📚 Module Breakdown**
 
-#☁️ Cloud Computing Essentials#
+☁️ Cloud Computing Essentials
 
 IaaS, PaaS, SaaS models, AWS global infrastructure, and cloud deployment strategies.
 
